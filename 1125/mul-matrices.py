@@ -12,7 +12,7 @@ def multiplicacion(a, b):
         for c in range(len(b[f])):
             suma = 0
             for m in range(len(a[f])):
-                suma = a[f][m] * b[m][c]
+                suma += a[f][m] * b[m][c]
             ret[f].append(suma)
     return ret
 
