@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import random
+import time
 
 m1 = list()
 m2 = list()
@@ -38,26 +39,8 @@ for f in range(f2):
         val = random.randint(1,50)
         m2[f].append(val)
 
+inicio = time.time()
 m3 = multiplicacion(m1,m2)
-
-print("M1")
-for f in range(f1):
-    print("[ ", end="")
-    for c in range(c1):
-        print(m1[f][c], end=", ")
-    print("]")
-
-print("M2")
-for f in range(f2):
-    print("[ ", end="")
-    for c in range(c2):
-        print(m2[f][c], end=", ")
-    print("]")
-
-print("M3")
-for f in range(len(m3)):
-    print("[ ", end="")
-    for c in range(len(m3[f])):
-        print(m3[f][c], end=", ")
-    print("]")
+fin = time.time()
+print("El tiempo es:", fin-inicio,"segundos")
 
